@@ -1,0 +1,42 @@
+name: Task
+description: Track a sprint task
+title: "[Task]: <clear title>"
+labels: ["status:todo"]
+body:
+  - type: markdown
+    attributes:
+      value: "Link a PR to auto-close with 'Fixes #<num>'"
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: GitHub handle
+      placeholder: "@username"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - area:theory
+        - area:iris
+        - area:mnist
+        - area:nlp
+        - area:bonus
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What is in scope?
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Bullet list of verifiable outcomes
+  - type: input
+    id: due
+    attributes:
+      label: Due (YYYY-MM-DD)

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.eggs/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+!part2_practical/**/*.ipynb # IMPORTANT: Re-include the notebooks we want to commit
+
+# Data and Models (ignore large files)
+data/*
+!data/.gitkeep
+models/*.pt
+models/*.h5
+models/*.pth
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
