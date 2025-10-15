@@ -24,6 +24,9 @@ body:
         - area:mnist
         - area:nlp
         - area:bonus
+        - area:docs
+        - area:ethics
+        - area:chore
     validations:
       required: true
   - type: textarea
