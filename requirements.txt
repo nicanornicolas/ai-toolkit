@@ -4,7 +4,9 @@ scikit-learn
 matplotlib
 seaborn
 jupyter
-torch torchvision torchaudio; sys_platform != 'win32'
+torch 
+torchvision 
+torchaudio; sys_platform != 'win32'
 tensorflow; sys_platform == 'win32'
 tensorflow-cpu; sys_platform != 'win32'
 spacy
