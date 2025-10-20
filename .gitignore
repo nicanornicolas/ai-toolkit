@@ -13,8 +13,6 @@ pip-delete-this-directory.txt
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
-!part2_practical/**/*.ipynb # IMPORTANT: Re-include the notebooks we want to commit
 
 # Data and Models (ignore large files)
 data/*
