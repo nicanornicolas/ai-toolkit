@@ -23,7 +23,7 @@ def predict(image):
     time.sleep(2)
 
     # Simulate a prediction (return a random digit)
-    predicti = np.random.randigit(0, 10)
+    prediction = np.random.randigit(0, 10)
     confidence = np.random.rand()
 
     return prediction, confidence
