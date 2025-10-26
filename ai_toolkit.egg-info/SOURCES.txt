@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+ai_toolkit.egg-info/PKG-INFO
+ai_toolkit.egg-info/SOURCES.txt
+ai_toolkit.egg-info/dependency_links.txt
+ai_toolkit.egg-info/top_level.txt
+bonus_app/app.py
+part2_practical/__init__.py
+part2_practical/task1_iris_sklearn/__init__.py
+part2_practical/task1_iris_sklearn/iris_pipeline.py
+tests/test_iris.py
+tests/test_mnist.py
+tests/test_spacy.py

@@ -1,0 +1,32 @@
+[flake8]
+max-line-length = 100
+ignore =
+    E203,
+    E266,
+    E501,
+    W503,
+    F403,
+    F401,
+    W291,
+    W293,
+    W292,
+    E302,
+    E231,
+    E251,
+    E265,
+    F541
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    migrations,
+    venv,
+    .venv,
+    env,
+    .env,
+    node_modules,
+    tests
+max-complexity = 10
+statistics = True
+count = True
