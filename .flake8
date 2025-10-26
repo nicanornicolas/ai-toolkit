@@ -1,0 +1,31 @@
+[flake8]
+# Maximum allowed line length (PEP8 recommends 79, but 88–120 is common for modern teams)
+max-line-length = 100
+
+# Ignore specific error codes (explained below)
+ignore =
+    E203,  # Whitespace before ':' (ignored by Black formatter)
+    E266,  # Too many leading '#' for block comments
+    E501,  # Line too long (handled by Black)
+    W503,  # Line break before binary operator (PEP8 vs Black conflict)
+    F403,  # 'from module import *' used (common in __init__.py)
+    F401,  # Imported but unused (often for Django __init__.py exports)
+
+# Exclude these directories from linting
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    migrations,
+    venv,
+    .venv,
+    env,
+    .env,
+    node_modules,
+    tests
+
+# Report settings
+max-complexity = 10     # Optional: Warn when function complexity > 10
+statistics = True        # Show summary stats after linting
+count = True             # Count number of errors
