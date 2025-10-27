@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import time
+from bonus_app.utils import preprocess_image, make_prediction
 
 # --- PAGE CONFIG ---
 st.set_page_config(
