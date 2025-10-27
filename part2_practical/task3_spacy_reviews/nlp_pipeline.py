@@ -1,4 +1,5 @@
 import spacy
+import re
 
 # It's efficient to load the model once
 # NOTE: You need to have the model downloaded! Run: python -m spacy download en_core_web_sm
@@ -17,19 +18,21 @@ def extract_entities(text: str):
     return entities
 
 def analyze_sentiment_rule_based(text: str) -> str:
-    """Analyzes sentiment using a simple rule-based approach."""
-    text_lower = text.lower()
-    
-    positive_keywords = ["love", "great", "amazing", "excellent", "best", "perfect"]
-    negative_keywords = ["hate", "terrible", "awful", "bad", "disappointed", "worst"]
-    
-    has_positive = any(keyword in text_lower for keyword in positive_keywords)
-    has_negative = any(keyword in text_lower for keyword in negative_keywords)
-    
-    if has_positive and not has_negative:
+    """Analyzes sentiment using a more robust rule-based approach by counting keywords."""
+    positive_words = {"good", "great", "amazing", "love", "excellent", "fantastic", "best", "awesome", "wonderful"}
+    negative_words = {"bad", "terrible", "awful", "hate", "poor", "worst", "disappointed", "boring", "horrible"}
+
+    # Normalize the text and find all words
+    words = re.findall(r"\b\w+\b", text.lower())
+
+    pos_count = sum(word in positive_words for word in words)
+    neg_count = sum(word in negative_words for word in words)
+
+    # Determine sentiment based on the word count comparison
+    if pos_count > neg_count:
         return "positive"
-    elif has_negative and not has_positive:
+    elif neg_count > pos_count:
         return "negative"
     else:
-        # If both or neither are present, classify as neutral
+        # If counts are equal (including 0 vs 0), it's neutral
         return "neutral"
