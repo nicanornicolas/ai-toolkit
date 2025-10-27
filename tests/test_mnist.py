@@ -32,7 +32,7 @@ def test_build_cnn_model():
     assert isinstance(model, tf.keras.Model)
     
     # Check if the output layer has 10 neurons (for 10 digits)
-    assert model.layers[-1].output_shape == 10
+    assert model.output_shape == (None, 10)
     
     # Check if the model is compiled
     assert model.optimizer is not None
