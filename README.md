@@ -81,7 +81,7 @@ spaCy NLP: part2_practical/task3_spacy_reviews/spacy_ner_sentiment.ipynb
 To launch the interactive MNIST digit classifier demo, run the following command from the root directory:
 streamlit run bonus_app/app.py
 
-streamlit run bonus_app/app.py
+
 📄 Deliverables
 All final submission materials are located in the deliverables/ folder.
 Final Report: Read our Comprehensive Report, which includes all theoretical answers, practical results, and our ethical analysis.
